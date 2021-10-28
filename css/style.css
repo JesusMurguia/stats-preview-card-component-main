@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-saturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --white: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  font-size: 15px;
+
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  color: var(--main-paragraph);
+}
+
+.insights {
+  font-size: 2.5rem;
+  color: var(--soft-violet);
+}
+
+.content {
+  text-align: center;
+  background-color: var(--dark-saturated-blue);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.header::after {
+  content: "";
+  background: hsla(277, 64%, 61%, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.header > * {
+  z-index: 10;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.header-img {
+  content: url("../images/image-header-mobile.jpg");
+  width: 100%;
+  height: 100%;
+  filter: contrast(1.7);
+  object-fit: cover;
+}
+
+.header {
+  padding: 0;
+}
+
+.text {
+  padding: 3rem 2rem;
+}
+.title {
+  color: var(--white);
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+.paragraph {
+  color: var(--main-paragraph);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stats {
+  color: var(--stat-headings);
+  font-family: "Inter", sans-serif;
+}
+
+.stats > * > * {
+  justify-content: center;
+}
+
+.stats > * {
+  margin: 1rem 0;
+}
+
+.stat-top {
+  color: var(--white);
+  font-weight: 900;
+}
+
+.stat-bottom {
+  color: var(--stat-headings);
+}
+@media screen and (min-width: 990px) {
+  .header-img {
+    content: url("../images/image-header-desktop.jpg");
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .header::after {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .text {
+    text-justify: distribute;
+    text-align: left;
+    padding: 3rem 10rem 3rem 3rem;
+  }
+  .paragraph {
+    padding-right: 10rem;
+  }
+  .stats {
+    padding-left: 1rem;
+  }
+  .stats > * > * {
+    justify-content: left;
+  }
+}
